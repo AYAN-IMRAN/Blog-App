@@ -1,6 +1,6 @@
 import Input from "../components/Input";
 
-export default function CreateBlog() {
+function CreateBlog() {
   return (
     <div className="h-[calc(100vh-80px)] bg-neutral-950 flex items-center justify-center mt-8 px-6 md:px-10">
       <div className="w-full max-w-2xl bg-neutral-900 rounded-2xl border border-neutral-800 shadow-xl p-6 md:p-8">
@@ -45,3 +45,5 @@ export default function CreateBlog() {
     </div>
   );
 }
+
+export default CreateBlog
