@@ -4,13 +4,21 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import CreateBlog from "./pages/CreateBlog";
+import { Toaster, toast } from 'sonner';
 
-export default function App() {
+
+function App() {
   return (
     <BrowserRouter>
       {/* Global Layout */}
       <div className="min-h-screen bg-neutral-950 text-white">
         <Navbar />
+         <Toaster 
+        position="top-center"
+        richColors
+        closeButton
+        expand
+      />
         
         {/* Routes */}
         <main className="pt-6"> 
@@ -25,3 +33,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App
