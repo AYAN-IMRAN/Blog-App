@@ -83,12 +83,8 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-Built with ❤️ by **[Your Name](https://github.com/AYAN-IMRAN)**
+Built with ❤️ by **[AYAN IMRAN](https://github.com/AYAN-IMRAN)**
 
 ```
 
----
-
-
-👉 Bhai, chaho to mai isme **badges section** bhi add kar du (React, Tailwind, Appwrite, PRs welcome, etc.) taake aur GitHub-pro feel aaye?
-```
+=
