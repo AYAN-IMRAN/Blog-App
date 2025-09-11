@@ -5,6 +5,8 @@ import { account } from "../contants";
 import { ID } from "appwrite";
 import { toast } from "sonner";
 
+
+
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

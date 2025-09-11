@@ -4,8 +4,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import CreateBlog from "./pages/CreateBlog";
-import { Toaster, toast } from 'sonner';
-
+import Profile from "./pages/Profile";
+import { Toaster } from "sonner";
 
 function App() {
   return (
@@ -13,20 +13,21 @@ function App() {
       {/* Global Layout */}
       <div className="min-h-screen bg-neutral-950 text-white">
         <Navbar />
-         <Toaster 
-        position="top-center"
-        richColors
-        closeButton
-        expand
-      />
-        
+        <Toaster
+          position="top-center"
+          richColors
+          closeButton
+          expand
+        />
+
         {/* Routes */}
-        <main className="pt-6"> 
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/create" element={<CreateBlog />} />
+            <Route path="/profile" element={<Profile />} /> 
           </Routes>
         </main>
       </div>
@@ -34,4 +35,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

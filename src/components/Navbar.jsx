@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Home, PlusSquare, LogIn, UserPlus } from "lucide-react";
+import { Home, PlusSquare, LogIn, UserPlus, User } from "lucide-react";
 import { useState } from "react";
 
 function Navbar() {
@@ -8,6 +8,8 @@ function Navbar() {
   const navItems = [
     { path: "/", label: "Home", icon: <Home size={18} /> },
     { path: "/create", label: "Create", icon: <PlusSquare size={18} /> },
+    { path: "/profile", label: "Profile", icon: <User size={18} /> },
+    
     { path: "/login", label: "Login", icon: <LogIn size={18} /> },
     { path: "/signup", label: "Signup", icon: <UserPlus size={18} /> },
   ];
@@ -21,7 +23,7 @@ function Navbar() {
           to="/"
           className="text-xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent tracking-wide"
         >
-          Dark<span className="text-white">Blog</span>
+          Blo<span className="text-white">gify</span>
         </NavLink>
 
         {/* Desktop Menu */}
