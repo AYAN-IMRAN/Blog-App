@@ -85,6 +85,3 @@ This project is licensed under the MIT License.
 
 Built with ❤️ by **[AYAN IMRAN](https://github.com/AYAN-IMRAN)**
 
-```
-
-=
