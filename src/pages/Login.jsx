@@ -70,34 +70,39 @@ function Login() {
                   let user = await account.createEmailPasswordSession(email, password);
 
                   if (user) {
-                    // custom success toast
-                    toast.custom((t) => (
-                      <div
-                        className={`${
-                          t.visible ? "animate-enter" : "animate-leave"
-                        } max-w-sm w-full bg-neutral-900 text-white border border-cyan-500/40 shadow-xl rounded-xl p-4 flex items-start gap-3`}
-                      >
-                        <div className="bg-cyan-500 text-black w-8 h-8 flex items-center justify-center rounded-full font-bold">
-                          ✅
-                        </div>
-                        <div className="flex-1">
-                          <p className="font-semibold">Login Successful</p>
-                          <p className="text-sm text-neutral-400">
-                            Welcome back! Redirecting you...
-                          </p>
-                        </div>
-                        <button
-                          onClick={() => toast.dismiss(t)}
-                          className="text-neutral-400 hover:text-white transition"
-                        >
-                          ✖
-                        </button>
-                      </div>
-                    ));
+  // custom success toast
+  toast.custom((t) => (
+    <div
+      className={`${
+        t.visible ? "animate-enter" : "animate-leave"
+      } max-w-sm w-full bg-neutral-900 text-white border border-cyan-500/40 shadow-xl rounded-xl p-4 flex items-start gap-3`}
+    >
+      <div className="bg-cyan-500 text-black w-8 h-8 flex items-center justify-center rounded-full font-bold">
+        ✅
+      </div>
+      <div className="flex-1">
+        <p className="font-semibold">Login Successful</p>
+        <p className="text-sm text-neutral-400">
+          Welcome back! Redirecting you...
+        </p>
+      </div>
+      <button
+        onClick={() => toast.dismiss(t)}
+        className="text-neutral-400 hover:text-white transition"
+      >
+        ✖
+      </button>
+    </div>
+  ));
 
-                    console.log(user);
-                    navigate("/");
-                  }
+  console.log(user);
+
+  // ⏳ 3 sec delay before redirect
+  setTimeout(() => {
+    navigate("/");
+  }, 3000);
+}
+
                 } catch (error) {
                   toast.custom((t) => (
                     <div

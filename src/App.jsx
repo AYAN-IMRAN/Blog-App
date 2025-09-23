@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* Global Layout */}
-      <div className="min-h-screen bg-neutral-950 text-white">
+      <div className="min-h-screen bg-neutral-950 text-white ">
         <Navbar />
         <Toaster
           position="top-center"

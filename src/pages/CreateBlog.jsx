@@ -2,7 +2,7 @@ import Input from "../components/Input";
 
 function CreateBlog() {
   return (
-    <div className="min-h-screen bg-neutral-950 flex items-center justify-center px-8 py-8 overflow-y-auto">
+    <div className="h-full bg-neutral-950 flex items-start justify-center px-8 py-8 overflow-hidden">
       <div className="w-full max-w-lg bg-neutral-900 rounded-xl border border-neutral-800 shadow-lg p-8">
         
         {/* Heading */}

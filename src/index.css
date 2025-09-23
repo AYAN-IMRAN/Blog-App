@@ -3,7 +3,3 @@
 html, body {
   @apply bg-neutral-950 text-neutral-100;
 }
-
-body{
-    overflow: hidden;
-}
