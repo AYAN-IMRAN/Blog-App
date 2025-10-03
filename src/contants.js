@@ -1,10 +1,13 @@
-import { Client, Account, ID } from "appwrite";
+import { Client, Account, ID, TablesDB } from 'appwrite';
 
 export const client = new Client();
 
 client
-  .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT) // env se endpoint le raha hai
-  .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID); // env se project id le raha hai
+    .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT)
+    .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID);      
 
 export const account = new Account(client);
-export { ID };
+
+export const tableDB = new TablesDB(client)
+
+export {ID}

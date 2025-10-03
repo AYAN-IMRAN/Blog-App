@@ -1,18 +1,38 @@
 import { NavLink } from "react-router-dom";
 import { Home, PlusSquare, LogIn, UserPlus, User } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { account } from "../contants";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [user ,setUser] = useState(null);
+
+  // fetch user 
+  useEffect(() => {
+    const fetUser = async () => {
+     try {
+      const currentUer = await account.get()
+      setUser(currentUer)
+     } catch (error) {
+      setUser(null)
+     } 
+    }
+    fetUser()
+  },[])
 
   const navItems = [
     { path: "/", label: "Home", icon: <Home size={18} /> },
     { path: "/create", label: "Create", icon: <PlusSquare size={18} /> },
-    { path: "/profile", label: "Profile", icon: <User size={18} /> },
+
     
-    { path: "/login", label: "Login", icon: <LogIn size={18} /> },
-    { path: "/signup", label: "Signup", icon: <UserPlus size={18} /> },
   ];
+
+  if(user) {
+    navItems.push({ path: "/profile", label: "Profile", icon: <User size={18} /> },)
+  }else{
+navItems.push({ path: "/login", label: "Login", icon: <LogIn size={18} /> },
+    { path: "/signup", label: "Signup", icon: <UserPlus size={18} /> },)
+  }
 
   return (
     <nav className="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-900/90 backdrop-blur-md">

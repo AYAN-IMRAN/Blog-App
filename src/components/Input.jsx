@@ -1,3 +1,5 @@
+
+
 function Input({ label, type = "text", placeholder ,onChange,value }) {
   return (
     <div className="flex flex-col space-y-1 w-full">
