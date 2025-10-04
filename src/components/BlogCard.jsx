@@ -16,7 +16,13 @@ function BlogCard({ image, title, desc, date }) {
         <p className="text-sm text-neutral-400 line-clamp-2">
           {desc}
         </p>
-        <p className="text-xs text-neutral-500">{date}</p>
+       <p className="text-neutral-500 text-xs mt-3">
+          {new Date(date).toLocaleDateString("en-US", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })}
+        </p>
 
         {/* Read More Button */}
         <button className="mt-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition">
